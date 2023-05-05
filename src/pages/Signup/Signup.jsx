@@ -127,7 +127,7 @@ const Signup = () => {
         formik.resetForm(); 
       } 
     } 
-  }, [response]); // erase contents on succesful form submission
+  }, [response,formik,onOpen]); // erase contents on succesful form submission
 
   return (
     <div className="signup-page">

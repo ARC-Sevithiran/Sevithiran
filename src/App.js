@@ -5,9 +5,6 @@ import { AlertProvider } from "./context/alertContext";
 import {UserProvider} from "./context/userContext"
 import Alert from "./components/Alert";
 import './App.css';
-import { useEffect } from 'react';
-import { auth } from './firebaseConfig';
-import { setPersistence,signInWithEmailAndPassword,browserSessionPersistence } from 'firebase/auth';
 
 
 

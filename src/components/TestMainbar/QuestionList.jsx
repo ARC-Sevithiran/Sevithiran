@@ -1,6 +1,6 @@
 import React from 'react'
 import Questions from './Questions'
-import { Button, Accordion, AccordionItem } from '@chakra-ui/react'
+import {  Accordion, AccordionItem } from '@chakra-ui/react'
 
 
 
@@ -28,8 +28,11 @@ const QuestionList = (props) => {
           <AccordionItem border='2px' borderRadius='30px' mb='4%' bgColor="rgba(205, 238, 255, 0.822)" color='rgba(29, 156, 203, 0.866)' >
             <Questions key={object.id} data={object} level={props.level} />
           </AccordionItem>
-          )
-        }})
+          )}
+          else{
+            return(<div/>)
+          }
+        })
         }
       </Accordion>
     </div>

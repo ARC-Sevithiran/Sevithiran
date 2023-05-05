@@ -1,7 +1,6 @@
 import React from 'react'
-import vidbg from '../../assets/TestAMenuBg.mp4'
-import { Box, Vstack, HStack,Heading } from '@chakra-ui/react'
-import { Link } from 'react-router-dom'
+import { Box,Heading } from '@chakra-ui/react'
+import { Link} from 'react-router-dom'
 
 const Navcard = (props) => {
   return (

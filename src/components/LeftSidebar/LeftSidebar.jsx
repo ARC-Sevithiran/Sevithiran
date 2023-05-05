@@ -1,7 +1,7 @@
 import React from 'react'
 import './LeftSidebar.css'
 import { NavLink } from 'react-router-dom'
-import { Heading, Button } from '@chakra-ui/react'
+import { Heading } from '@chakra-ui/react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHouse } from "@fortawesome/free-solid-svg-icons";
 

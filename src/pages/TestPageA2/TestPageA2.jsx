@@ -9,8 +9,6 @@ import { useState, useEffect } from 'react'
 import AudioContext from '../../context/audioContext'
 import axios from 'axios'
 import './TestPageA2.css'
-import {storage} from '../../firebaseConfig'
-import { ref, getDownloadURL } from 'firebase/storage'
 
 const TestPageA2 = () => {
 
@@ -53,6 +51,11 @@ const TestPageA2 = () => {
       page_head = 'நிலை 6 - பின்னணி இரைச்சல் முன்னிலையில்'
       json_getter='VI'
       level='Level_6'
+      break;
+    default:
+      page_head=''
+      json_getter=''
+      level=''
       break;
   }
 //

@@ -2,7 +2,7 @@ import React from 'react';
 import {Link , useNavigate} from 'react-router-dom'
 import {FcSearch} from 'react-icons/fc'
 import Avatar from '../Avatar'
-import { useState,useContext,useEffect } from 'react';
+import {useContext,useEffect } from 'react';
 import './Navbar.css'
 import { Heading } from '@chakra-ui/react';
 import { signOut } from 'firebase/auth';
@@ -41,7 +41,7 @@ const Navbar=()=>{
       if (storedIsLoggedIn === 'true') {
         setIsLoggedIn(true);
       }
-    }, []);
+    });
 
     // const [color,setColor] = useState('#fadee8')
     console.log(4,isLoggedIn)

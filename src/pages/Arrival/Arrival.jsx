@@ -34,8 +34,7 @@ const Arrival = () => {
 
 
 
-  const {isLoading, response, submit} = useSubmit();
-  const passwordreg = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/;
+  const {isLoading, submit} = useSubmit();
   const formik = useFormik({
     initialValues: {
       signemail:"",

@@ -1,5 +1,4 @@
 import React from 'react'
-import {Heading} from'@chakra-ui/react'
 import NavCard from '../../components/NavCard/NavCard'
 import Test1Img from '../../assets/test_solo.jpg'
 import Test2Img from '../../assets/test_multiple.jpg'

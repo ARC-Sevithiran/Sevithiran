@@ -8,9 +8,9 @@ import UserContext from "../context/userContext";
 
 
 const useSubmit = () => {
-  const {uid, uemail, updateEmail , updateuid, pass} = useContext(UserContext);
+  const {uid, uemail, updateEmail , updateuid} = useContext(UserContext);
 
-  const postLoginFunc = (email , uid, upass)=>{
+  const postLoginFunc = (email , uid)=>{
     updateEmail(email)
     updateuid(uid)
   }

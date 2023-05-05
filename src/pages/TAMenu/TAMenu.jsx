@@ -1,6 +1,5 @@
 import React from 'react'
 import vidbg from '../../assets/TestAMenuBg.mp4'
-import Navbar from '../../components/Navbar/Navbar'
 import Navcard from '../../components/NavCardNew/Navcard'
 import { HStack, Heading } from '@chakra-ui/react'
 import './TAMenu.css'

@@ -1,0 +1,60 @@
+.auth{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(#580ec8,#8839ff,#cba9ff);
+    z-index: 10;
+    position:relative;
+
+}
+
+.auth-box{
+    background-color: rgb(255, 221, 0);
+    border-radius: 10px;
+    width: auto;
+    height: auto;
+    padding: 4%;
+    box-shadow: 0px 1px 10px rgb(125, 125, 125);
+    position:relative;
+    z-index: 0;
+}
+
+.front-page{
+    position: absolute;
+    z-index: 2 ;
+    background-image: url('../../assets/arrbg.jpg');
+    background-position-y: -90px;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    border: #fffefe 2px solid;
+}
+
+.front-page-content{
+    height:100%;
+    width: 100%;
+    background-color: #000000a3;
+}
+
+.enter-button{
+    position: relative;
+    top: 40%;
+    left:40%;
+    background-color: #0000003f;
+    padding-left:10%;
+    padding-right:10%;
+    padding-top:3%;
+    padding-bottom:3%;
+    color: rgb(206, 206, 206);
+    border: 2px solid rgb(138, 138, 138);
+    border-radius: 10px;
+    font-size: xx-large;
+    transition: 0.5s;
+}
+
+.enter-button:hover{
+    background-color: #0000005b;
+} 
+

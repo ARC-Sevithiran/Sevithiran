@@ -1,0 +1,19 @@
+.outer-box{
+    width: 18rem;
+    height: 25rem;
+    color: rgb(210, 180, 255);
+    gap: 3%;
+    transition: 0.4s;
+    box-shadow: 1px 0px 15px 5px rgb(43, 43, 43);
+}
+
+.card-obj{
+    width: 45rem;
+    height: 15rem;
+    object-fit: cover;
+}
+
+.outer-box:hover{
+    transform: translate(2px,2px);
+    box-shadow: none;
+}

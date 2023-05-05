@@ -1,0 +1,34 @@
+.t1-main-container{
+    min-height: 100vh;
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin: 0% auto;
+    background-color: #a0e7ff;
+    color:rgb(3, 0, 204);
+}
+
+.t1-left{
+    width: 34vw;
+}
+
+.t1-bars{
+    padding-left: 1.5%;
+    width: 100%;
+}
+
+.t1-mainbar{
+    width:37vw;
+}
+
+.t1-right{
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.t1-header{
+    padding-right: 10%;
+}

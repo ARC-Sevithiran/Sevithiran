@@ -1,0 +1,28 @@
+.question-card{
+    display: flex;
+    min-width: 300px;
+    height:175px;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.268);
+    border-radius: 15px;
+    transition: .5s;
+}
+
+
+.question-card:hover{
+    transform: translate3d(1px,1px,0);
+    box-shadow: -3px -1px 10px rgba(93, 93, 93, 0.581);
+}
+
+.audio-name{
+    padding: 10px;
+    background-color: rgba(184, 234, 247, 0.832);
+    border-radius: 15px;
+    color:rgb(77, 77, 77)
+}
+.audio-playpause{
+    border-radius: 400px;
+    border: none; 
+    background-color: rgba(145, 229, 255, 0);
+}
+

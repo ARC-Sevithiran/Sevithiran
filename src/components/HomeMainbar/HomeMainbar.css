@@ -1,0 +1,40 @@
+.main-bar{
+    width: calc(100% - 208px);
+    float: left;
+    margin: 25px 0px;
+    margin-left: 14vw;
+}
+
+.instructions{
+    background-color: rgba(250, 250, 250, 0.545);
+    width: 60%;
+    padding:3px;
+    padding-left: 7px;
+    font-size: 18px;
+    margin-top: 17px;
+    margin-bottom: 17px;
+    border-radius: 15px;
+    display:inline-flex;
+    align-items: baseline;
+    gap:10px;
+    position: sticky;
+
+}
+
+.main-bar-header{
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(to right,rgba(169, 233, 252, 0),rgba(169, 233, 252, 0.99),rgba(169, 233, 252, 0));
+    position: sticky;
+}
+
+.main-bar-header h1{
+    font-weight: 400;
+}
+
+.questions-space{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap:10px
+}

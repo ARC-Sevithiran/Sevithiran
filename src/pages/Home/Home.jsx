@@ -1,28 +1,37 @@
 import React from 'react'
-import NavCard from '../../components/NavCard/NavCard'
-import Test1Img from '../../assets/test_solo.jpg'
-import Test2Img from '../../assets/test_multiple.jpg'
-import LearnImg from '../../assets/Learning.jpg'
-import Settings from '../../assets/settings.jpg'
-import Help from '../../assets/help.jpg'
 import Navbar from '../../components/Navbar/Navbar'
+import { VStack, Heading, Text } from '@chakra-ui/react'
+import Navcard from '../../components/NavCardNew/Navcard'
+import vidbg from '../../assets/testA1MenuVid.mp4'
 import './Home.css'
 
 const Home = () => {
   return (
-    <div className='home-container'>
-      <Navbar/>
-      <div className="nav-block">
-        <div className="block b1">
-          <NavCard linker='TestA1Menu' bgImage={Test1Img} menuOpt='செவிவழி விழிப்புணர்வு' bgColor='rgb(255, 63, 63)' textColor='rgb(255, 219, 219)'/>
-          <NavCard linker='Learning' bgImage={Test2Img} menuOpt='செவிவழி வேறுபாடு' bgColor='rgb(0, 168, 6)' textColor='rgb(124, 255, 128)'/>
-          <NavCard linker='Learning' bgImage={LearnImg} menuOpt='கற்றல்' bgColor='rgb(103, 198, 236)' textColor='rgb(0, 54, 135)'/>
+    <div className='home-ext-container'>
+      <div className="home-container">
+        
+        <div className="vid-container">
+          <video autoPlay loop muted height='100%'>
+            <source src={vidbg} type='video/mp4'/>
+          </video>
         </div>
-        <div className="block b2">
-          <NavCard linker='Learning' bgImage={Settings} menuOpt='அமைப்புகள்' bgColor='rgb(79, 0, 198)' textColor='rgb(210, 180, 255)'/>
-          <NavCard linker='Learning' bgImage={Help} menuOpt='உதவி' bgColor='rgb(255, 221, 0)' textColor='rgb(163, 125, 0)'/>
-        </div>
-      </div>      
+        <div className="content-container">
+          <div className="home-info">
+            <Heading size='4xl' pb='5%'>வரவேற்பு</Heading>
+            <Heading size='lg' lineHeight='140%' fontWeight='medium'>காது கேளாத குழந்தைகளுக்கு செவித்திறனைக் கண்டறிதல் மற்றும் செவிவழிப் வேறுபாடு ஆகியவற்றைப் பயிற்றுவிப்பதற்கான தமிழ் மொழியில் ஒரு பொருள் மற்றும் துணை தயாரிப்பாக பெற்றோர் பயிற்சி கையேடு. இது NewGen IEDC SRM இன் நிதியுதவியின் கீழ் உருவாக்கப்பட்டது மற்றும் நெறிமுறை எண்ணுடன் பதிவு செய்யப்பட்டுள்ளது.</Heading>
+          </div>
+          <div className="menu-options">
+            <Heading color='rgb(255, 216, 44)' pb='10%' size='2xl'>பட்டியல்</Heading>
+            <VStack>
+              <Navcard linker='TestA1Menu' text='செவிவழி விழிப்புணர்வு' bColor='rgba(205, 238, 255, .85)' hColor='rgba(147, 214, 247, .85)' tColor='rgba(29, 156, 203, 1)' />
+              <Navcard linker='TestA2/Level1' text='செவிவழி வேறுபாடு' bColor='rgba(147, 247, 209, .85)' hColor='rgba(77, 254, 186, .85)' tColor='rgba(0, 192, 115, 1)' />
+              <Navcard linker='TestA2/Level1' text='கற்றல்' bColor='rgba(255, 137, 137, 0.822)' hColor='rgba(255, 111, 111, 0.822)' tColor='rgba(230, 0, 0, 0.822)' />
+              <Navcard linker='TestA2/Level1' text='அமைப்புகள்' bColor='rgba(255, 241, 177, 0.85)' hColor='rgb(207, 189, 125)' tColor='rgb(255, 200, 0)' />
+              <Navcard linker='TestA2/Level1' text='உதவி' bColor='rgba(255, 152, 198, 0.85)' hColor='rgba(255, 118, 180, 0.85)' tColor='rgba(252, 0, 113, 0.999)' />
+            </VStack>
+          </div>
+        </div>  
+      </div>     
     </div>
   )
 }

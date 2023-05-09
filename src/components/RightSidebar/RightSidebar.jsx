@@ -58,12 +58,11 @@ const RightSidebar = (props) => {
             <VStack alignItems='flex-start'> 
               <Heading size='sm' textAlign='center'>தேர்வு விவரங்கள்</Heading>  
               <Divider borderColor='rgb(255, 178, 97)' />
-              <Heading size='sm' fontWeight='normal'>{props.page_head}</Heading>
               <HStack flexWrap='wrap'>
                 <audio ref={pageNameRef} src={props.dispData.name} />
-                <audio ref={insRef} src={props.dispData.instructions} />
-                <Button bgColor='rgb(255, 178, 97)' _hover={{bgColor:'rgb(252, 151, 42)'}} color='rgb(255, 236, 216)' borderRadius='20px' onClick={handleIns} width='fit-content' textOverflow='ellipsis'>அறிவுறுத்தல்கள்</Button>
+                <audio ref={insRef} src={props.dispData.instructions} />                
                 <Button bgColor='rgb(255, 178, 97)' _hover={{bgColor:'rgb(252, 151, 42)'}} color='rgb(255, 236, 216)' borderRadius='20px' onClick={handlePageName}>நிலை பெயர்</Button>
+                <Button bgColor='rgb(255, 178, 97)' _hover={{bgColor:'rgb(252, 151, 42)'}} color='rgb(255, 236, 216)' borderRadius='20px' onClick={handleIns} width='fit-content' textOverflow='ellipsis' pb='1%'>அறிவுறுத்தல்கள்</Button>
               </HStack>
             </VStack>
           </Box>
@@ -84,8 +83,8 @@ const RightSidebar = (props) => {
                   </HStack>                
                 <Divider borderColor='rgb(255, 178, 97)' />                   
                   {T1st?<Text>சோதனை 1: {T1} <FontAwesomeIcon icon={faCheck} beat size="xs" /></Text>: <Text>சோதனை 1: {T1} <FontAwesomeIcon icon={faXmark} beatFade size="xs" /></Text>}
-                  {T2st?<Text>சோதனை 1: {T2} <FontAwesomeIcon icon={faCheck} beat size="xs" /></Text>: <Text>சோதனை 1: {T2} <FontAwesomeIcon icon={faXmark} beatFade size="xs" /></Text>}
-                  {T3st?<Text>சோதனை 1: {T3} <FontAwesomeIcon icon={faCheck} beat size="xs" /></Text>: <Text>சோதனை 1: {T3} <FontAwesomeIcon icon={faXmark} beatFade size="xs" /></Text>}
+                  {T2st?<Text>சோதனை 2: {T2} <FontAwesomeIcon icon={faCheck} beat size="xs" /></Text>: <Text>சோதனை 2: {T2} <FontAwesomeIcon icon={faXmark} beatFade size="xs" /></Text>}
+                  {T3st?<Text>சோதனை 3: {T3} <FontAwesomeIcon icon={faCheck} beat size="xs" /></Text>: <Text>சோதனை 3: {T3} <FontAwesomeIcon icon={faXmark} beatFade size="xs" /></Text>}
                 </VStack>
               </Box>
               

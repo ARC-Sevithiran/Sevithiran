@@ -10,14 +10,18 @@ import {
   InputGroup,
   InputRightElement,
   VStack,
-  HStack
+  HStack,
+  Image
 } from "@chakra-ui/react";
 import * as Yup from 'yup';
 import useSubmit from "../../hooks/useSubmit";
 import { useState } from "react";
 import {useNavigate} from 'react-router-dom'
 import './Arrival.css'
-
+import siiec from '../../assets/SIIEC.png'
+import srm from '../../assets/SRM.png'
+import srmmed from '../../assets/SRMmed.png'
+import iedc from '../../assets/IEDC.png'
 
 
 const Arrival = () => {
@@ -65,6 +69,12 @@ const Arrival = () => {
     <div className="auth">
       {enter && <div className="front-page">
         <div className="front-page-content">
+          <div className="image-array">
+            <Image src={siiec}   width='300px'/>
+            <Image src={srm}   width='200px' />
+            <Image src={srmmed}   width='200px' />
+            <Image src={iedc}   width='200px' />
+            </div>
           <button onClick={handleClickfr} className="enter-button">Enter</button>
         </div>
       </div>}

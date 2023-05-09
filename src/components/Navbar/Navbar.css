@@ -2,17 +2,15 @@
     min-height:4.8rem;
     width: 100%;
     margin: 0% auto;
-    border-top: solid 3px #001571;
-    box-shadow: 0px 1px 5px #00000033;
-    position:fixed;
     z-index: 1;
     top :0%;
     left: 0%;
-    background-color: #f8f9f9;
     display:flex;
     justify-content: center;
     align-items:center;
-    background-color: rgb(209, 209, 209);
+    background-color: #fff3822b;
+    border: 3px solid rgb(255, 184, 43);
+    border-radius: 10px;
 }
 .navbar{
     height: 100%;
@@ -29,7 +27,7 @@
     font-size:small;
     font-weight:500;
     text-decoration:none;
-    color:rgb(0, 23, 92);
+    color:rgba(255, 184, 4, 0.759);
     transition:0.2s;
 }
 .nav-btn{
@@ -41,49 +39,6 @@
     background-color: rgba(0, 4, 118, 0.136);
 }
 
-.navbar form{
-    padding: 0px 12px;
-    position: relative;
-    width:120px;
-    
-}
-
-.navbar form input{
-    width: 0%;
-    outline: none;
-    margin:0;
-    padding:8px 32px 8px 10px;
-    font-size: 13px;
-    border:none;
-    border-radius: 10px;
-    background: transparent;
-    color: #00096a;
-    width: 9rem;
-    border:solid 1px rgba(0, 20, 93, 0.679);  
-}
-
-.navbar form .search-icon{
-    width:23px;
-    height:auto;
-    position:absolute;
-    left:126px;
-    top:7px;
-    cursor:pointer;
-}
-
-.nav-links{
-    padding: 7px 13px;
-    border:solid 1px rgb(0, 20, 131);
-    border-radius: 10px;
-    background-color: #002c6f49;
-    cursor:pointer;
-    color: #00064d;
-}
-
-.nav-links:hover{
-    background-color: #00095a5e;
-}
-
 .nav-logo{
     display: flex;
     justify-content: center;
@@ -93,8 +48,8 @@
 .buttons{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    width: 20rem;
+    justify-content: center;
+    gap:15px
 }
 
 .logo-section{

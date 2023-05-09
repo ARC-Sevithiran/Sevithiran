@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link , useNavigate} from 'react-router-dom'
-import {FcSearch} from 'react-icons/fc'
+import { Button } from '@chakra-ui/react';
 import Avatar from '../Avatar'
 import {useContext,useEffect } from 'react';
 import './Navbar.css'
@@ -50,25 +50,23 @@ const Navbar=()=>{
             <div className="navbar" >
                 <div className="logo-section">
                     <Link to='/Home' className='nav-item nav-logo'>
-                    <Heading size='lg'>செவித்திறன்</Heading>
+                        <Heading size='lg'>செவித்திறன்</Heading>
                     </Link>
                 </div>
                 <div className="buttons">
-                    <form>
-                        <label htmlFor="searchText"><FcSearch className='search-icon' /></label>
-                        <input type="text" className="search-click" id='searchText' name="searchText" placeholder="search here..." />
-                    </form>
                     { isLoggedIn === false ?
-                        <Link to='/' className='nav-item nav-links'>Log In</Link>:
+                        <Button colorScheme='orange' onClick={() =>{ navigate("/")}}>Log in</Button>:
                         <>
                             {console.log(3,isLoggedIn)}
                             <Link to='/profile' className='' style={{color:'white', textDecoration:'none' }}><Avatar backgroundColor='#009dff' px='10px' py='15px' borderRadius='50%' color='white'>N</Avatar></Link>
-                            <button className='nav-item nav-links' onClick={Logout}>Log out</button>
+                            <Button  colorScheme='orange' onClick={Logout}>Log out</Button>
                         </>
                     }
                 </div>
             </div>
         </nav>
-    );
+    )
 }
-export default Navbar;
+export default Navbar
+
+    

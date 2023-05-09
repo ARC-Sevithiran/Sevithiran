@@ -1,14 +1,16 @@
 import React from 'react'
 import './LeftSidebar.css'
-import { NavLink } from 'react-router-dom'
-import { Heading } from '@chakra-ui/react'
+import { NavLink, useNavigate } from 'react-router-dom'
+import { Heading, Button } from '@chakra-ui/react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHouse } from "@fortawesome/free-solid-svg-icons";
 
 
 const LeftSidebar = (props) => {
+  const navigate=useNavigate()
   return (
     <div className='left-sidebar'>
+      
       <div className="left-sidebar-heading">
         <Heading size='xl'>நிலைகள் : </Heading> 
       </div> 
@@ -35,6 +37,9 @@ const LeftSidebar = (props) => {
           <Heading size='md'><FontAwesomeIcon icon={faHouse} /></Heading>
         </NavLink>
       </nav>
+      <div className="ls-feedback">
+        <Button colorScheme='pink' onClick={()=>{navigate("/TestA1/feedback")}}>பெற்றோர் கருத்து</Button>
+      </div>
     </div>
   )
 }

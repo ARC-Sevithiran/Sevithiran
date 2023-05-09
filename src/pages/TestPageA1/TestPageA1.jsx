@@ -90,42 +90,45 @@ const TestPageA1 = () => {
 
   return (
     <div className='t1-main-container'>
-      
-      <Navbar/>
-      <AudioContext.Provider 
-      value={{audioData,
-       setaudioData,
-       T1,
-       setT1,
-       T2,
-       setT2,
-       T3,
-       setT3,
-       T1st,
-       setT1st,
-       T2st,
-       setT2st,
-       T3st,
-       setT3st}}>
-      <div className="t1-left">
-          <LeftSidebar testname='A1'/>
+      <div className="t1-nav-container">
+        <Navbar/>
       </div>
-      <div className="t1-bars">
-        <div className="t1-main">
-          <div className="t1-header">
-            <Heading size='2xl' pt='100px'>செவிவழி விழிப்புணர்வு</Heading>
-            <Heading size='lg' noOfLines={2}>உரத்த சுற்றுச்சூழல் ஒலிகள்</Heading>
-          </div>
-          <div className="t1-mainbar">
-          {tableData.Data.length > 0 && (<TestMainbar tableData={tableData.Data}  level={level}/>)}
-          </div>  
-        </div>  
-      </div>
-      
-        <div className="t1-right">
-        {tableData.Data.length > 0 && <RightSidebar data={audioData} page_head={page_head}  level={level} dispData={tableData.Data[11]}/>}
+      <div className="t1-other-container">
+        <AudioContext.Provider 
+        value={{audioData,
+        setaudioData,
+        T1,
+        setT1,
+        T2,
+        setT2,
+        T3,
+        setT3,
+        T1st,
+        setT1st,
+        T2st,
+        setT2st,
+        T3st,
+        setT3st}}>
+        <div className="t1-left">
+            <LeftSidebar testname='A1'/>
         </div>
-      </AudioContext.Provider>
+        <div className="t1-bars">
+          <div className="t1-main">
+            <div className="t1-header">
+              <Heading size='2xl' pt='20px'>செவிவழி விழிப்புணர்வு</Heading>
+              <Heading size='lg' noOfLines={2}>{page_head}</Heading>
+            </div>
+            <div className="t1-mainbar">
+            {tableData.Data.length > 0 && (<TestMainbar tableData={tableData.Data}  level={level}/>)}
+            </div>  
+          </div>  
+        </div>
+        
+          <div className="t1-right">
+          {tableData.Data.length > 0 && <RightSidebar data={audioData} page_head={page_head}  level={level} dispData={tableData.Data[11]}/>}
+          </div>
+        </AudioContext.Provider>
+      </div>
     </div>
     
   )

@@ -23,6 +23,12 @@
     color:#cf32ff
 }
 
+.ls-feedback{
+    padding-left: 7%;
+    position: relative;
+    padding-top: 20%;
+}
+
 .side-nav{
     height: auto;
     max-width: 100%;

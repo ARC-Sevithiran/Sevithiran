@@ -85,6 +85,7 @@ const TestPageA1 = () => {
   const [T1st,setT1st] = useState(false)
   const [T2st,setT2st] = useState(false)
   const [T3st,setT3st] = useState(false)
+  const [total, settotal] = useState(0)
 //
 
 
@@ -108,7 +109,9 @@ const TestPageA1 = () => {
         T2st,
         setT2st,
         T3st,
-        setT3st}}>
+        setT3st,
+        total,
+        settotal}}>
         <div className="t1-left">
             <LeftSidebar testname='A1'/>
         </div>

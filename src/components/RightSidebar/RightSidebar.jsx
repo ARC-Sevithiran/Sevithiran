@@ -25,7 +25,7 @@ const RightSidebar = (props) => {
     pageNameRef.current.play()
   }
 
-  const {audioData, T1, setT1, T2, setT2, T3, setT3, T1st, setT1st, T2st, setT2st, T3st, setT3st  } = useContext(AudioContext)
+  const {audioData, T1, setT1, T2, setT2, T3, setT3, T1st, setT1st, T2st, setT2st, T3st, setT3st , total } = useContext(AudioContext)
 
   useEffect(() =>{
     setT1('')
@@ -52,45 +52,48 @@ const RightSidebar = (props) => {
   return (
     <div className='boxer'>
       
-      <Box borderLeft='2px' height='90%' borderLeftRadius='30px' bgColor='rgba(255, 236, 216, 0.60)' borderColor='rgb(255, 178, 97)' p={5} flexWrap='wrap' overflowY='scroll'>
-        <VStack height='100%' width='100%' justifyContent='center'>
-          <Box height='25%%' border='2px' color='rgb(255, 178, 97)' width='100%' borderRadius='30px' p={4}> 
-            <VStack alignItems='flex-start'> 
-              <Heading size='sm' textAlign='center'>தேர்வு விவரங்கள்</Heading>  
+      <Box borderLeft='2px' height='100%' borderLeftRadius='30px' bgColor='rgba(255, 236, 216, 0.60)' borderColor='rgb(255, 178, 97)' p={5} flexWrap='wrap'>
+        <Box overflowY='scroll' height='100%'>
+          <VStack height='auto' width='100%' justifyContent='center'>
+            <Box height='25%%' border='2px' color='rgb(255, 178, 97)' width='100%' borderRadius='30px' p={4}> 
+              <VStack alignItems='flex-start'> 
+                <Heading size='sm' textAlign='center'>தேர்வு விவரங்கள்</Heading>  
+                <Divider borderColor='rgb(255, 178, 97)' />
+                <HStack flexWrap='wrap'>
+                  <audio ref={pageNameRef} src={props.dispData.name} />
+                  <audio ref={insRef} src={props.dispData.instructions} />                
+                  <Button bgColor='rgb(255, 178, 97)' _hover={{bgColor:'rgb(252, 151, 42)'}} color='rgb(255, 236, 216)' borderRadius='20px' onClick={handlePageName}>நிலை பெயர்</Button>
+                  <Button bgColor='rgb(255, 178, 97)' _hover={{bgColor:'rgb(252, 151, 42)'}} color='rgb(255, 236, 216)' borderRadius='20px' onClick={handleIns} width='fit-content' textOverflow='ellipsis' pb='1%'>அறிவுறுத்தல்கள்</Button>
+                </HStack>
+                <Heading size='md' fontWeight='bold' border='2px solid rgb(255, 178, 97)' p='3' borderRadius='20px'>மொத்த மதிப்பெண்: {total}</Heading>
+              </VStack>
+            </Box>
+            <Box height='100%' border='2px' color='rgb(255, 178, 97)' width='100%' borderRadius='30px' p={4}>
+              <VStack><Heading size='md' textAlign='center'>கேள்வி விவரங்கள்</Heading>
               <Divider borderColor='rgb(255, 178, 97)' />
-              <HStack flexWrap='wrap'>
-                <audio ref={pageNameRef} src={props.dispData.name} />
-                <audio ref={insRef} src={props.dispData.instructions} />                
-                <Button bgColor='rgb(255, 178, 97)' _hover={{bgColor:'rgb(252, 151, 42)'}} color='rgb(255, 236, 216)' borderRadius='20px' onClick={handlePageName}>நிலை பெயர்</Button>
-                <Button bgColor='rgb(255, 178, 97)' _hover={{bgColor:'rgb(252, 151, 42)'}} color='rgb(255, 236, 216)' borderRadius='20px' onClick={handleIns} width='fit-content' textOverflow='ellipsis' pb='1%'>அறிவுறுத்தல்கள்</Button>
-              </HStack>
-            </VStack>
-          </Box>
-          <Box height='100%' border='2px' color='rgb(255, 178, 97)' width='100%' borderRadius='30px' p={4}>
-            <VStack><Heading size='md' textAlign='center'>கேள்வி விவரங்கள்</Heading>
-             <Divider borderColor='rgb(255, 178, 97)' />
-              {props.level==='Level_1' && <Box border='2px'  color='rgb(255, 178, 97)' width='100%' borderRadius='30px' p={2} align='center' height='100%'>
-                <Text pb='5px' fontWeight='semibold'>காட்சி குறிப்பு: </Text>
-                <Image src={audioData.v_cue} boxSize='150' borderRadius='10px' p={0} />
-              </Box>} 
-             <Box border='2px' color='rgb(255, 178, 97)' width='100%' borderRadius='30px' p={4} >
-                <VStack alignItems='flex-start'>
-                  <HStack justifyContent='center' flexWrap='wrap'>
-                    <Heading size='sm'>{audioData.t_name}</Heading>
-                    <audio ref={audioNameRef} src={audioData.name_audio} />
-                    <Button bgColor='rgb(255, 178, 97)' _hover={{bgColor:'rgb(252, 151, 42)'}} color='rgb(255, 236, 216)' borderRadius='20px' onClick={handlePlay}>ஒலி பெயர்</Button>
-                    <Text border='2px' p={2} borderRadius='30px'>{score}/3</Text>
-                  </HStack>                
-                <Divider borderColor='rgb(255, 178, 97)' />                   
-                  {T1st?<Text>சோதனை 1: {T1} <FontAwesomeIcon icon={faCheck} beat size="xs" /></Text>: <Text>சோதனை 1: {T1} <FontAwesomeIcon icon={faXmark} beatFade size="xs" /></Text>}
-                  {T2st?<Text>சோதனை 2: {T2} <FontAwesomeIcon icon={faCheck} beat size="xs" /></Text>: <Text>சோதனை 2: {T2} <FontAwesomeIcon icon={faXmark} beatFade size="xs" /></Text>}
-                  {T3st?<Text>சோதனை 3: {T3} <FontAwesomeIcon icon={faCheck} beat size="xs" /></Text>: <Text>சோதனை 3: {T3} <FontAwesomeIcon icon={faXmark} beatFade size="xs" /></Text>}
-                </VStack>
-              </Box>
-              
-            </VStack>
-          </Box>
-        </VStack>
+                {props.level==='Level_1' && <Box border='2px'  color='rgb(255, 178, 97)' width='100%' borderRadius='30px' p={2} align='center' height='100%'>
+                  <Text pb='5px' fontWeight='semibold'>காட்சி குறிப்பு: </Text>
+                  <Image src={audioData.v_cue} boxSize='150' borderRadius='10px' p={0} />
+                </Box>} 
+              <Box border='2px' color='rgb(255, 178, 97)' width='100%' borderRadius='30px' p={4} >
+                  <VStack alignItems='flex-start'>
+                    <HStack justifyContent='center' flexWrap='wrap'>
+                      <Heading size='sm'>{audioData.t_name}</Heading>
+                      <audio ref={audioNameRef} src={audioData.name_audio} />
+                      <Button bgColor='rgb(255, 178, 97)' _hover={{bgColor:'rgb(252, 151, 42)'}} color='rgb(255, 236, 216)' borderRadius='20px' onClick={handlePlay}>ஒலி பெயர்</Button>
+                      <Text border='2px' p={2} borderRadius='30px'>{score}/3</Text>
+                    </HStack>                
+                  <Divider borderColor='rgb(255, 178, 97)' />                   
+                    {T1st?<Text>சோதனை 1: {T1} <FontAwesomeIcon icon={faCheck} beat size="xs" /></Text>: <Text>சோதனை 1: {T1} <FontAwesomeIcon icon={faXmark} beatFade size="xs" /></Text>}
+                    {T2st?<Text>சோதனை 2: {T2} <FontAwesomeIcon icon={faCheck} beat size="xs" /></Text>: <Text>சோதனை 2: {T2} <FontAwesomeIcon icon={faXmark} beatFade size="xs" /></Text>}
+                    {T3st?<Text>சோதனை 3: {T3} <FontAwesomeIcon icon={faCheck} beat size="xs" /></Text>: <Text>சோதனை 3: {T3} <FontAwesomeIcon icon={faXmark} beatFade size="xs" /></Text>}
+                  </VStack>
+                </Box>
+                
+              </VStack>
+            </Box>
+          </VStack>
+        </Box>
       </Box>
     </div>
   )

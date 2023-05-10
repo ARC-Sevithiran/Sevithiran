@@ -139,6 +139,10 @@ const Questions = (props) => {
   const [t2,sett2] = useState('')
   const [t3,sett3] = useState('')
 
+  const [t1st,sett1st] = useState(false)
+  const [t2st,sett2st] = useState(false)
+  const [t3st,sett3st] = useState(false)
+
   const[t1ren,sett1ren] = useState(true)//checks which button to render, one with audio or one without it
   const[t2ren,sett2ren] = useState(true) 
   const[t3ren,sett3ren] = useState(true)
@@ -173,6 +177,7 @@ const Questions = (props) => {
       setanst2("ஆம்")
       sett2ren(true)
       yesCount++
+      
     }
     else{
       setanst2("இல்லை")
@@ -187,6 +192,7 @@ const Questions = (props) => {
       setanst3("ஆம்")
       sett3ren(true)
       yesCount++
+      
     }
     else{
       setanst3("இல்லை")
@@ -198,7 +204,7 @@ const Questions = (props) => {
 
 
 //context usage
-  const {audioData, setaudioData,  setT1,  setT2,  setT3,  setT1st,  setT2st,  setT3st  } =useContext(AudioContext)
+  const {audioData, setaudioData,  setT1,  setT2,  setT3,  setT1st,  setT2st,  setT3st, settotal } =useContext(AudioContext)
 //
 
 //local answer state management
@@ -218,9 +224,12 @@ const Questions = (props) => {
     sett1(e.target.value)
     if(e.target.value === anst1){
       setT1st(true)
+      sett1st(true)
+      settotal((prev)=>prev + 1)
     }
     else{
       setT1st(false)
+      sett1st(false)
     }
 
     sett1Disabler(true)
@@ -231,9 +240,14 @@ const Questions = (props) => {
 
     if(e.target.value === anst2){
       setT2st(true)
+      sett2st(true)
+      settotal((prev)=>prev + 1)
+
     }
     else{
       setT2st(false)
+      sett2st(false)
+
     }
     sett2Disabler(true)
   }
@@ -242,9 +256,13 @@ const Questions = (props) => {
     sett3(e.target.value)
     if(e.target.value === anst3){
       setT3st(true)
+      sett3st(true)
+      settotal((prev)=>prev + 1)
     }
     else{
       setT3st(false)
+      sett3st(false)
+
     }
     sett3Disabler(true)
   }
@@ -263,6 +281,15 @@ const Questions = (props) => {
     setT2(t2)
     setT3(t3)
   },[t1,t2,t3,setT1,setT2,setT3])
+
+  const updateHandler = () =>{
+    setT1(t1)
+    setT2(t2)
+    setT3(t3)
+    setT1st(t1st)
+    setT2st(t2st)
+    setT3st(t3st)
+  }
 //
 
 
@@ -280,7 +307,7 @@ useEffect(() =>{
   return (
     <div className='questions-main-container'>
       <div className="play-button">
-              <AccordionButton borderRadius='30px' _expanded={{bg:'rgba(205, 238, 255, 0.822)', color:'rgba(0, 120, 163, 0.866)'}}>
+              <AccordionButton borderRadius='30px' _expanded={{bg:'rgba(205, 238, 255, 0.822)', color:'rgba(0, 120, 163, 0.866)'}} onClick={updateHandler}>
                 <Box as="span" flex='1' textAlign='center' onClick={handleClick}>
                   <Heading size='lg' fontWeight='normal'>{props.data.t_name}</Heading>
                 </Box>

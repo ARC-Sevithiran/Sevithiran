@@ -45,7 +45,6 @@ const Profile = () => {
   }
   return (
     <div className='profile-main-container'>
-      <Navbar />
       <div className="basic-info">
         <img className='profileimage' src='https://www.svgrepo.com/show/396005/child-medium-dark-skin-tone.svg' alt={"imager"} width='70%' />
         <Heading size='xl'>{user.name}</Heading>

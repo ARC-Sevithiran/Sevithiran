@@ -85,13 +85,17 @@ const TestPageA2 = () => {
   const [T1st,setT1st] = useState(false)
   const [T2st,setT2st] = useState(false)
   const [T3st,setT3st] = useState(false)
+  const [total, settotal] = useState(0)
 //
 
 
 
   return (
     <div className='t1-main-container'>
-      <Navbar/>
+      <div className="t1-nav-container">
+        <Navbar/>
+      </div>
+      <div className="t1-other-container">
       <AudioContext.Provider 
       value={{audioData,
        setaudioData,
@@ -106,15 +110,17 @@ const TestPageA2 = () => {
        T2st,
        setT2st,
        T3st,
-       setT3st}}>
+       setT3st,
+       total,
+       settotal}}>
       <div className="t1-left">
           <LeftSidebar testname='A2'/>
       </div>
       <div className="t1-bars">
         <div className="t1-main">
           <div className="t1-header">
-            <Heading size='2xl' pt='100px'>செவிவழி விழிப்புணர்வு</Heading>
-            <Heading size='lg' noOfLines={2}>உரத்த சுற்றுச்சூழல் ஒலிகள்</Heading>
+            <Heading size='2xl' pt='20px'>செவிவழி விழிப்புணர்வு</Heading>
+            <Heading size='lg' noOfLines={2} pr={20} lineHeight={1.3}>{page_head}</Heading>
           </div>
           <div className="t1-mainbar">
           {tableData.Data.length > 0 && (<TestMainbar tableData={tableData.Data}  level={level}/>)}
@@ -127,7 +133,7 @@ const TestPageA2 = () => {
         </div>
       </AudioContext.Provider>
     </div>
-    
+    </div>
   )
 }
 

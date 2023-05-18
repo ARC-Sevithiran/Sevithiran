@@ -20,12 +20,12 @@ const QuestionList = (props) => {
   
   return (
     <div>
-      <Accordion allowToggle allowMultiple={false} pt="8%" pb="10%" >
+      <Accordion allowToggle allowMultiple={false} pt="8%" pb="10%" width='100%'>
       
         {props.tableData.map((object) =>{
           if(object.id<=props.tableData.length-1){
           return(
-          <AccordionItem border='2px' borderRadius='30px' mb='4%' bgColor="rgba(205, 238, 255, 0.822)" color='rgba(29, 156, 203, 0.866)' >
+          <AccordionItem border='2px' borderRadius='30px' mb='4%' bgColor="rgba(205, 238, 255, 0.822)" color='rgba(29, 156, 203, 0.866)' width='100%'>
             <Questions key={object.id} data={object} level={props.level} />
           </AccordionItem>
           )}

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Navbar from '../../components/Navbar/Navbar'
 import { VStack, Heading, Text } from '@chakra-ui/react'
 import Navcard from '../../components/NavCardNew/Navcard'

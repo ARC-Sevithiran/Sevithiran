@@ -37,9 +37,9 @@ const LeftSidebar = (props) => {
           <Heading size='md'><FontAwesomeIcon icon={faHouse} /></Heading>
         </NavLink>
       </nav>
-      <div className="ls-feedback">
+      {/* <div className="ls-feedback">
         <Button colorScheme='pink' onClick={()=>{navigate("/TestA1/feedback")}}>பெற்றோர் கருத்து</Button>
-      </div>
+      </div> */}
     </div>
   )
 }

@@ -307,7 +307,7 @@ useEffect(() =>{
   return (
     <div className='questions-main-container'>
       <div className="play-button">
-              <AccordionButton borderRadius='30px' _expanded={{bg:'rgba(205, 238, 255, 0.822)', color:'rgba(0, 120, 163, 0.866)'}} onClick={updateHandler}>
+              <AccordionButton borderRadius='30px' _expanded={{bg:'rgba(205, 238, 255, 0.822)', color:'rgba(0, 120, 163, 0.866)'}} onClick={updateHandler} width='44vw'>
                 <Box as="span" flex='1' textAlign='center' onClick={handleClick}>
                   <Heading size='lg' fontWeight='normal'>{props.data.t_name}</Heading>
                 </Box>

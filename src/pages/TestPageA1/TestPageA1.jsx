@@ -119,7 +119,7 @@ const TestPageA1 = () => {
           <div className="t1-main">
             <div className="t1-header">
               <Heading size='2xl' pt='20px'>செவிவழி விழிப்புணர்வு</Heading>
-              <Heading size='lg' noOfLines={2}>{page_head}</Heading>
+              <Heading size='lg' pr={20} lineHeight={1.3} noOfLines={2}>{page_head}</Heading>
             </div>
             <div className="t1-mainbar">
             {tableData.Data.length > 0 && (<TestMainbar tableData={tableData.Data}  level={level}/>)}

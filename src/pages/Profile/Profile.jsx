@@ -3,9 +3,10 @@ import { useContext } from 'react'
 import './Profile.css'
 import Navbar from '../../components/Navbar/Navbar'
 import { db } from '../../firebaseConfig'
-import {doc , getDoc} from "firebase/firestore"
+import {doc , getDoc, getDocs, where, query} from "firebase/firestore"
 import UserContext from '../../context/userContext'
 import { Heading, Divider } from '@chakra-ui/react'
+
 
 
 const Profile = () => {

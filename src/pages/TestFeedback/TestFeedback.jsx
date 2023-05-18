@@ -70,7 +70,7 @@ const TestFeedback = () => {
             }
             </div>
             
-            <Button colorScheme='green' type='submit' width='30%' height='100%' pt='1%' pb='1%'>Submit</Button>
+            <Button colorScheme='green' type='submit' width='30%' height='100%' pt='1%' pb='1%' onClick={()=>navigate("/Home")}>Submit</Button>
           </div>
       </div>
     </div>

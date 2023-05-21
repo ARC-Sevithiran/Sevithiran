@@ -1,0 +1,47 @@
+.tr-out-container{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(206, 255, 244, 0.386);
+}
+
+.tr-main-container{
+    height: 100%;
+    width: 100%;
+    color:rgb(0, 185, 199);
+    display: flex;
+    flex-direction: column;
+}
+
+.tr-content-container{
+    height: calc(100% - 4.8rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-y: scroll;
+    padding-bottom: 5%;
+}
+
+.tr-acc-container{
+    width: 70%;
+}
+
+.tr-testDetails{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.tr-test-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.tr-testButton{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}

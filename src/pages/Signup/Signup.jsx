@@ -133,7 +133,7 @@ const Signup = () => {
     <div className="signup-page">
     <div className="auth-signup">
       {/* below starts page 1 */}
-    {page1?<div className="auth-box-signup page-1"> 
+    {page1?<div className="auth-box page-1" > 
        <div className="signup-auth">
         <VStack alignItems="center" color='#9452f7' >
             <Heading as="h1" id="auth-section">

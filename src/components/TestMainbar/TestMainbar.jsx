@@ -33,14 +33,20 @@ const TestMainbar = (props) => {
   const red_location = location.pathname.split("/")
   console.log(red_location)
   let test_name = ''
+  let total_score = 0
+  let pass_score = 0
 
   switch(red_location[1]){
     case 'TestA1':
       test_name = "சுற்றுச்சூழல் ஒலிகள்"
+      total_score = 66
+      pass_score = 33
       break;
 
       case 'TestA2':
       test_name = "இசை"
+      total_score = 44
+      pass_score = 22
       break;
   }
 
@@ -51,6 +57,9 @@ const TestMainbar = (props) => {
     {
       TestName : test_name,
       Score : total,
+      TestType: 'செவிவழி விழிப்புணர்வு',
+      TotalScore: total_score,
+      PassScore : pass_score,
       TimeStamp : firestoreDate
     })
     .then(() =>{

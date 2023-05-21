@@ -4,6 +4,10 @@ import {auth ,db} from "../../src/firebaseConfig"
 import { createUserWithEmailAndPassword , signInWithEmailAndPassword} from "firebase/auth"
 import {doc , setDoc} from "firebase/firestore"
 import UserContext from "../context/userContext";
+import { getAuth, setPersistence, browserSessionPersistence } from "firebase/auth";
+
+const Auth = getAuth();
+
 
 
 
@@ -15,12 +19,13 @@ const useSubmit = () => {
     updateuid(uid)
   }
 
-
+  
 
   const [isLoading, setLoading] = useState(false);
   const [response, setResponse] = useState(null);
 
   const navigate = useNavigate()
+
 
   const submit = async (data) => {
     setLoading(true);
@@ -47,10 +52,15 @@ const useSubmit = () => {
           })
         })
         .then(()=>{
-          localStorage.setItem('uid', uid)
-          localStorage.setItem('uemail', uemail)
+          localStorage.setItem('uemail', data.signemail)
+          localStorage.setItem('upass', data.signpassword)
           localStorage.setItem('isLoggedIn','true')
           navigate('/Home')
+        })
+        .then(() =>{
+          console.log(localStorage.getItem('uemail'))
+          console.log(localStorage.getItem('upass'))
+          console.log(localStorage.getItem('isLoggedIn'))
         })
       }
     
@@ -58,13 +68,18 @@ const useSubmit = () => {
       signInWithEmailAndPassword(auth , data.signemail, data.signpassword)
       .then((e)=>{
         postLoginFunc(e.user.email , e.user.uid) 
-        navigate('/Home')
       })
       .then(()=>{
-        localStorage.setItem('uid', uid)
-        localStorage.setItem('uemail', uemail)
+        localStorage.setItem('uemail', data.signemail)
+        localStorage.setItem('upass', data.signpassword)
         localStorage.setItem('isLoggedIn','true')
         navigate('/Home')
+      })
+      .then(() =>{
+        console.log("logger")
+        console.log(localStorage.getItem('uemail'))
+        console.log(localStorage.getItem('upass'))
+        console.log(localStorage.getItem('isLoggedIn'))
       })
     }
       

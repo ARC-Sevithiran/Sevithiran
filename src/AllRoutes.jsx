@@ -9,6 +9,7 @@ import Profile from './pages/Profile/Profile'
 import TestPageA2 from './pages/TestPageA2/TestPageA2'
 import TAMenu from './pages/TAMenu/TAMenu'
 import TestFeedback from './pages/TestFeedback/TestFeedback'
+import TestResults from './pages/TestResults/TestResults'
 
 const AllRoutes = () => {
   return (
@@ -34,6 +35,7 @@ const AllRoutes = () => {
             <Route path='/TestA1Menu' element={<TAMenu/>}/>
             <Route path='/TestA1/feedback'element={<TestFeedback/>}/>
             <Route path='/TestA2/feedback'element={<TestFeedback/>}/>
+            <Route path='/TestResults'element={<TestResults/>}/>
         </Routes>
       
     </div>

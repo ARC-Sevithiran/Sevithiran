@@ -5,7 +5,8 @@ import Navbar from '../../components/Navbar/Navbar'
 import { db } from '../../firebaseConfig'
 import {doc , getDoc, getDocs, where, query} from "firebase/firestore"
 import UserContext from '../../context/userContext'
-import { Heading, Divider } from '@chakra-ui/react'
+import { Heading, Divider, Button, VStack } from '@chakra-ui/react'
+import { useNavigate } from 'react-router-dom'
 
 
 
@@ -13,6 +14,7 @@ const Profile = () => {
   const{uid,uemail} = useContext(UserContext)
   const [user, setDocumentData] = useState(null);
   const [loading, setLoading] = useState(true);
+  const navigate = useNavigate()
 
   const quarray=["உங்கள் குழந்தை புதியவர்களை சந்திக்கும் பொழுது கேட்கும் பிரச்சனை சங்கடத்தை ஏற்படுதிகிரதா?",
   "உங்கள் குழந்தை குடும்ப உறுப்பினர்களுடன் பேசும் பொழுது கேட்கும் பிரச்சனை விரக்தியை ஏற்படுத்துமா?",
@@ -45,43 +47,55 @@ const Profile = () => {
     return <div>Loading...</div>;
   }
   return (
-    <div className='profile-main-container'>
-      <div className="basic-info">
-        <img className='profileimage' src='https://www.svgrepo.com/show/396005/child-medium-dark-skin-tone.svg' alt={"imager"} width='70%' />
-        <Heading size='xl'>{user.name}</Heading>
-        <Heading size='md'>Profile Information</Heading>
-        <Divider/>
-        <div className="profile-details">
-            <div className="info-item">
-              <Heading size='md'>Email:</Heading>
-              <Heading size='md'>{user.email}</Heading>
+    <div className="profile-out-container">
+      <div className='profile-main-container'>
+        <div className="left-container">
+          <div className="basic-info">
+            <img className='profileimage' src='https://www.svgrepo.com/show/396005/child-medium-dark-skin-tone.svg' alt={"imager"} width='50%' />
+            <Heading size='xl'>{user.name}</Heading>
+            <Heading size='md'>Profile Information</Heading>
+            <Divider/>
+            <div className="profile-details">
+              <div className="info-item">
+                <Heading size='md'>Email:</Heading>
+                <Heading size='md'>{user.email}</Heading>
+              </div>
+              <div className="info-item">
+                <Heading size='md'>Gender:</Heading>
+                <Heading size='md'>{user.gender}</Heading>
+              </div>
+              <div className="info-item">
+                <Heading size='md'>Age:</Heading>
+                <Heading size='md'>{user.age}</Heading>
+              </div>
             </div>
-            <div className="info-item">
-              <Heading size='md'>Gender:</Heading>
-              <Heading size='md'>{user.gender}</Heading>
-            </div>
-            <div className="info-item">
-              <Heading size='md'>Age:</Heading>
-              <Heading size='md'>{user.age}</Heading>
-            </div>
+          </div>
+          <div className="testres-block">
+            <Heading bgColor='rgb(255, 163, 163)' width='100%' paddingTop='2%' paddingBottom='2%' textAlign='center' color='rgb(223, 61, 61)' overflow='hidden'>Test History</Heading>
+            <VStack padding='4%' spacing='4%' >
+              <Heading size='lg' color='rgb(223, 61, 61)'>Check out previous test attempts!</Heading>
+              <Button colorScheme='pink' size='lg' onClick={() => navigate("/TestResults")}>Test Results</Button>
+            </VStack>
+          </div>
         </div>
-      </div>
-      <div className="question-pq-details">
-        <div className="question-pq-header">
-          <Heading>Parents' Answers to Questions</Heading>
+        <div className="question-pq-details">
+          <div className="question-pq-header">
+            <Heading>Parents' Answers to Questions</Heading>
+          </div>
+          <div className="question-block">
+            <ul className="question-list">
+              {user.answers.map((answer, index) => (
+                <li key={index} className="question-item">
+                  <Heading size='md'>{quarray[index]}</Heading>
+                  <span className="question-answer">{answer}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          
         </div>
-        <div className="question-block">
-          <ul className="question-list">
-            {user.answers.map((answer, index) => (
-              <li key={index} className="question-item">
-                <Heading size='md'>{quarray[index]}</Heading>
-                <span className="question-answer">{answer}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
 
+      </div>
     </div>
   )
 }

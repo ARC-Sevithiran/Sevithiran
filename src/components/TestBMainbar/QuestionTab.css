@@ -1,0 +1,78 @@
+.B1qt-main-container{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 239, 179);
+    border-radius: 20px;
+    color:rgb(0, 111, 56);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.B1qt-content-container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+
+.B1qt-top{
+    width: 100%;
+    height: max-content;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: space-between;
+    padding: 3%;
+    gap:12px;
+}
+
+.B1qt-headings{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:center;
+    padding: 2%;
+    background-color: rgba(1, 200, 100, 0.432);
+    border-radius: 20px;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+.B1qt-instructions{
+    border: 3px solid rgb(1, 200, 100);
+    border-radius: 20px;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+.B1qt-image-box{
+    border: 3px solid rgb(1, 200, 100);
+    border-radius: 20px;
+    padding: 3%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height:max-content;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.B1qt-images{
+    display: flex;
+    flex-direction: row;
+    height:100%;
+    width: 100%;
+    overflow:visible;
+    justify-content: space-evenly;
+    padding: 3%;
+}
+
+.B1qt-bottom{
+    width: 100%;
+    padding: 3%;
+    padding-top: 0;
+}

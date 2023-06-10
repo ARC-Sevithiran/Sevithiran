@@ -21,8 +21,8 @@ const Home = () => {
             <div className="menu-options">
               <Heading color='rgb(255, 216, 44)' pb='10%' size='2xl'>பட்டியல்</Heading>
               <VStack>
-                <Navcard linker='TestA1Menu' text='செவிவழி விழிப்புணர்வு' bColor='rgba(205, 238, 255, .85)' hColor='rgba(147, 214, 247, .85)' tColor='rgba(29, 156, 203, 1)' />
-                <Navcard linker='TestA2/Level1' text='செவிவழி வேறுபாடு' bColor='rgba(147, 247, 209, .85)' hColor='rgba(77, 254, 186, .85)' tColor='rgba(0, 192, 115, 1)' />
+                <Navcard linker='TestAMenu' text='செவிவழி விழிப்புணர்வு' bColor='rgba(205, 238, 255, .85)' hColor='rgba(147, 214, 247, .85)' tColor='rgba(29, 156, 203, 1)' />
+                <Navcard linker='TestB1/Level1' text='செவிவழி வேறுபாடு' bColor='rgba(147, 247, 209, .85)' hColor='rgba(77, 254, 186, .85)' tColor='rgba(0, 192, 115, 1)' />
                 <Navcard linker='TestA2/Level1' text='கற்றல்' bColor='rgba(255, 137, 137, 0.822)' hColor='rgba(255, 111, 111, 0.822)' tColor='rgba(230, 0, 0, 0.822)' />
                 <Navcard linker='TestA2/Level1' text='அமைப்புகள்' bColor='rgba(255, 241, 177, 0.85)' hColor='rgb(207, 189, 125)' tColor='rgb(255, 200, 0)' />
                 <Navcard linker='TestA2/Level1' text='உதவி' bColor='rgba(255, 152, 198, 0.85)' hColor='rgba(255, 118, 180, 0.85)' tColor='rgba(252, 0, 113, 0.999)' />

@@ -1,5 +1,5 @@
 import React from 'react'
-import HomeMainbar from '../../components/TestMainbar/TestMainbar'
+import HomeMainbar from '../../components/TestAMainbar/TestMainbar'
 import LeftSidebar from '../../components/LeftSidebar/LeftSidebar'
 import './Learning.css'
 const Learning = () => {

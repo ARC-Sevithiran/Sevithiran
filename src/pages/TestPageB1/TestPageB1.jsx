@@ -12,6 +12,8 @@ import { useLocation } from 'react-router-dom'
 
 const TestPageB1 = () => {
 
+  
+
   const location = useLocation()
   let page_head = ''
   let json_getter = '';
@@ -69,6 +71,26 @@ const TestPageB1 = () => {
     })
   },[json_getter])
 
+  const [test_topic,setTest_topic] = useState({
+    audio: new Audio("https://firebasestorage.googleapis.com/v0/b/arc-phase1-sevithiran.appspot.com/o/Test_B_1%2FLevel_1%2FTest_topic.wav?alt=media&token=ae468547-def5-419c-82a8-9bb10d051ed8"),
+    isPlaying: false
+  })
+  const [test_type,setTest_type] = useState({
+    audio: new Audio("https://firebasestorage.googleapis.com/v0/b/arc-phase1-sevithiran.appspot.com/o/Test_B_1%2FLevel_1%2FTest_type.wav?alt=media&token=22e071ba-dbf4-4fb7-9aca-228b513dd3da"),
+    isPlaying: false
+  })
+
+  const playpause = (variable, setVariable) => {
+    setVariable(prevState => {
+      const playState = prevState.isPlaying;
+      if (playState) {
+        variable.audio.pause();
+      } else {
+        variable.audio.play();
+      }
+      return { ...prevState, isPlaying: !playState };
+    });
+  };
 
   return (
     <>
@@ -86,8 +108,8 @@ const TestPageB1 = () => {
                 <Heading size='lg'>{page_head}</Heading>
               </div> 
               <div className="B1-head-buttons">
-                <Button size="lg" colorScheme='whatsapp'>சோதனை தலைப்பு</Button>
-                <Button size="lg" colorScheme='whatsapp'>நிலை தலைப்பு</Button>
+                <Button size="lg" colorScheme='whatsapp' onClick={() => playpause(test_topic,setTest_topic)}>சோதனை தலைப்பு</Button>
+                <Button size="lg" colorScheme='whatsapp' onClick={() => playpause(test_type,setTest_type)}>நிலை தலைப்பு</Button>
               </div>
             </div>
                

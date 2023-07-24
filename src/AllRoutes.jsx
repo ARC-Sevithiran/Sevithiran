@@ -1,3 +1,4 @@
+import React from 'react'
 import { Route,Routes } from 'react-router-dom'
 import Learning from './pages/Learning/Learning'
 import Home from './pages/Home/Home'

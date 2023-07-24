@@ -43,12 +43,7 @@ const TestPageA1 = () => {
       level='Level_4'
       break;
     case '/TestA1/Level5':
-      page_head = 'நிலை 5 - அமைதியான சூழ்நிலையில்'
-      json_getter='V'
-      level='Level_5'
-      break;
-    case '/TestA1/Level6':
-      page_head = 'நிலை 6 - பின்னணி இரைச்சல் முன்னிலையில்'
+      page_head = 'நிலை 5 - பின்னணி இரைச்சல் முன்னிலையில்'
       json_getter='VI'
       level='Level_6'
       break;

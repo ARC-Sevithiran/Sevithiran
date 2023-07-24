@@ -9,7 +9,7 @@ import TestBMainbar from '../../components/TestBMainbar/TestBMainbar'
 import axios from 'axios'
 import { useEffect,useState } from 'react'
 import { useLocation } from 'react-router-dom'
-
+import { PointsProvider } from '../../context/BpointsContext'
 const TestPageB1 = () => {
 
   
@@ -112,10 +112,12 @@ const TestPageB1 = () => {
                 <Button size="lg" colorScheme='whatsapp' onClick={() => playpause(test_type,setTest_type)}>நிலை தலைப்பு</Button>
               </div>
             </div>
-               
-            {tableData.Data.length>0 && (<div className="B1-tab-container">
-              <TestBMainbar data={tableData.Data}/>
-            </div>)}       
+              <PointsProvider>
+                {tableData.Data.length>0 && 
+                (<div className="B1-tab-container">
+                  <TestBMainbar data={tableData.Data}/>
+                </div>)}   
+              </PointsProvider>    
           </div>
         </div>
       </div>

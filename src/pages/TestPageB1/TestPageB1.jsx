@@ -9,7 +9,7 @@ import TestBMainbar from '../../components/TestBMainbar/TestBMainbar'
 import axios from 'axios'
 import { useEffect,useState } from 'react'
 import { useLocation } from 'react-router-dom'
-import { PointsProvider } from '../../context/BpointsContext'
+import { PointsProvider } from '../../context/pointsContext'
 const TestPageB1 = () => {
 
   

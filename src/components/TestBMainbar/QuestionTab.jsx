@@ -1,11 +1,11 @@
 import React,{useEffect, useRef} from 'react'
 import { Heading, Image, RadioGroup, Radio,VStack, HStack, Box, Button, Text } from '@chakra-ui/react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlay,faPause } from "@fortawesome/free-solid-svg-icons";
+import { faPlay } from "@fortawesome/free-solid-svg-icons";
 import { useToast } from '@chakra-ui/react';
 import  './QuestionTab.css'
 import { useState, useContext } from 'react';
-import { PointsContext } from '../../context/BpointsContext';
+import { PointsContext } from '../../context/pointsContext';
 import { useLocation } from 'react-router-dom'
 
 

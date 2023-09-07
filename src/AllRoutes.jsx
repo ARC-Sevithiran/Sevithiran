@@ -11,6 +11,7 @@ import TAMenu from './pages/TAMenu/TAMenu'
 import TestFeedback from './pages/TestFeedback/TestFeedback'
 import TestResults from './pages/TestResults/TestResults'
 import TestPageB1 from './pages/TestPageB1/TestPageB1'
+import TestPageA1new from './pages/TestPageA1new/TestPageA1new'
 
 const AllRoutes = () => {
   return (
@@ -21,12 +22,12 @@ const AllRoutes = () => {
             <Route path='/Home' element={<Home/>}/>
             <Route path='/Signup' element={<Signup/>}/>
             <Route path='/profile' element={<Profile/>}/>
-            <Route path='/TestA1/Level1' element={<TestPageA1/>}/>
-            <Route path='/TestA1/Level2' element={<TestPageA1/>}/>
-            <Route path='/TestA1/Level3' element={<TestPageA1/>}/>
-            <Route path='/TestA1/Level4' element={<TestPageA1/>}/>
-            <Route path='/TestA1/Level5' element={<TestPageA1/>}/>
-            <Route path='/TestA1/Level6' element={<TestPageA1/>}/>
+            <Route path='/TestA1/Level1' element={<TestPageA1new/>}/>
+            <Route path='/TestA1/Level2' element={<TestPageA1new/>}/>
+            <Route path='/TestA1/Level3' element={<TestPageA1new/>}/>
+            <Route path='/TestA1/Level4' element={<TestPageA1new/>}/>
+            <Route path='/TestA1/Level5' element={<TestPageA1new/>}/>
+            <Route path='/TestA1/Level6' element={<TestPageA1new/>}/>
             <Route path='/TestA2/Level1' element={<TestPageA2/>}/>
             <Route path='/TestA2/Level2' element={<TestPageA2/>}/>
             <Route path='/TestA2/Level3' element={<TestPageA2/>}/>

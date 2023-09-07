@@ -87,6 +87,7 @@ const Arrival = () => {
           </div>
         </div>
       </div>} */}
+      
   return (
     <div className="arrival">
     {enter && <div className ="front-page">

@@ -23,12 +23,9 @@ const LeftSidebar = (props) => {
         </NavLink>
         <NavLink to={`/Test${props.testname}/Level3`} className='side-nav-links' activeClassName='active'>
           <Heading size='md'>நிலை 3</Heading>
-        </NavLink>
+        </NavLink>   
         <NavLink to={`/Test${props.testname}/Level4`} className='side-nav-links' activeClassName='active'>
           <Heading size='md'>நிலை 4</Heading>
-        </NavLink>   
-        <NavLink to={`/Test${props.testname}/Level5`} className='side-nav-links' activeClassName='active'>
-          <Heading size='md'>நிலை 5</Heading>
         </NavLink>   
         <NavLink to='/Home' className='side-nav-links' activeClassName='active'>
           <Heading size='md'><FontAwesomeIcon icon={faHouse} /></Heading>

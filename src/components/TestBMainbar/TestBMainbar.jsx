@@ -3,7 +3,7 @@ import { Tabs, TabList, TabPanels, Tab, TabPanel, Heading } from '@chakra-ui/rea
 import QuestionTab from './QuestionTab'
 import './TestBMainbar.css'
 import { useContext } from 'react'
-import { PointsContext } from '../../context/BpointsContext'
+import { PointsContext } from '../../context/pointsContext'
 import SoundIndicator from './SoundIndicator';
 
 const TestBMainbar = (props) => {
